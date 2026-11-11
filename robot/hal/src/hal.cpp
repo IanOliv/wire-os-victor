@@ -78,7 +78,7 @@ namespace { // "Private members"
   // Counter for invalid prox sensor readings
   u32 invalidProxSensorStatusCounts_[(int)RangeStatus::HARDWARE_FAIL + 1] = {0};
   u32 noUpdateProxSensorStatusCount_ = 0;
-  TimeStamp_t nextInvalidProxDataReportSendTime_ms_ = 0;
+  TimeStamp_t nextInvalidProxDataReportSendTime_ms_ __attribute__((unused)) = 0;
   const u32 INVALID_PROX_DATA_REPORT_PERIOD_MS = 86400000; // Every 24 hours
 
   HAL::PowerState desiredPowerMode_;
@@ -87,7 +87,7 @@ namespace { // "Private members"
   bool reportUnexpectedPowerMode_ = false;
 
   // Time since the desired power mode was last set
-  TimeStamp_t lastPowerSetModeTime_ms_ = 0;
+  TimeStamp_t lastPowerSetModeTime_ms_ __attribute__((unused)) = 0;
 
   // Last time a HeadToBody frame was sent
   TimeStamp_t lastH2BSendTime_ms_ = 0;
