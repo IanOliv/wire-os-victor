@@ -661,7 +661,7 @@ Ressalvas (todas FATO):
 | H8 | Calor vem do laço ocupado do A2 ou do trabalho contínuo na base (A11) | Thread "WebsocketSender" a 100 % em `top -H`; temperatura caindo sem cliente | Temperatura igual com e sem cliente |
 | H9 | Renovação de DHCP ou varredura de Wi-Fi contribui para as quedas | `journalctl -u connman -u wpa_supplicant` com eventos nos mesmos minutos | Sem eventos de rede nos horários |
 
-Não foi encontrado nenhum trabalho periódico de hora em hora nos processos do robô além do timeout do websocket. No wire-os, o único temporizador horário é o `update-engine.timer`, que dorme um tempo aleatório de até 3600 s antes de agir (`wire-os:poky/victor/meta-anki/recipes-anki-robot/files/update-engine.timer:9`), portanto não cai em minuto fixo. Não foi possível ler o código do daemon `wired` (diretório vazio no clone), que roda como root e mexe em frequências.
+Não foi encontrado nenhum trabalho periódico de hora em hora nos processos do robô além do timeout do websocket. No wire-os, o único temporizador horário é o `update-engine.timer`, que dorme um tempo aleatório de até 3600 s antes de agir (`wire-os:poky/victor/meta-anki/recipes/anki-robot/files/update-engine.timer:9`), portanto não cai em minuto fixo. Não foi possível ler o código do daemon `wired` (diretório vazio no clone), que roda como root e mexe em frequências.
 
 ### 4.2 Na próxima falha, antes de reiniciar (10 min)
 
